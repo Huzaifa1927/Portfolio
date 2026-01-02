@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Huzaifa Arshad Khan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+    }
+  </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-500">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-4 shadow-md">
+    <!-- Left: Name -->
+    <div class="text-2xl font-bold">Huzaifa</div>
+
+    <!-- Center Menu (hidden on mobile) -->
+    <div class="hidden md:flex gap-6">
+      <a href="#about" class="menu-link">About</a>
+      <a href="#skills" class="menu-link">Skills</a>
+      <a href="#projects" class="menu-link">Projects</a>
+      <a href="#contact" class="menu-link">Contact</a>
+    </div>
+
+
+    <!-- Right Side -->
+    <div class="flex items-center gap-4">
+      <!-- Dark/Light Toggle -->
+      <button id="theme-toggle" class="p-2 rounded-full ">
+        <!-- Sun Icon -->
+        <svg id="sun-icon" xmlns="http://www.w3.org/2000/svg" 
+             class="h-6 w-6" fill="none" viewBox="0 0 24 24" 
+             stroke="black">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M12 4.5v-2m0 19v-2m9-7h-2M5 12H3m15.364-6.364l-1.414 1.414M7.05 
+              16.95l-1.414 1.414M16.95 16.95l1.414 1.414M7.05 
+              7.05L5.636 5.636M12 7a5 5 0 100 10 5 5 0 000-10z" />
+            </svg>
+        <!-- Moon Icon -->
+        <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" 
+             class="h-6 w-6 hidden" fill="none" viewBox="0 0 24 24" 
+             stroke="white">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z" />
+        </svg>
+      </button>
+      <!-- Get in Touch Button (hidden on mobile) -->
+      <a href="#contact" class="hidden md:block bg-white text-black px-4 py-2 rounded-lg border border-black hover:bg-gray-100 transition">
+        Get in Touch
+      </a>
+    </div>
+  </nav>
+
+  <section class="banner flex flex-col items-center justify-center text-center py-20 px-4 bg-gray-100 dark:bg-gray-900 transition-colors duration-500">
+  
+   <img src="./img/profile.jpg" alt="Huzaifa" class="w-48 h-48 rounded-full border-4 border-black dark:border-white mb-6">
+
+   <!-- Download Resume Button -->
+  <a href="./img/Huzaifa Arshad Khan (2).pdf" download class="inline-block px-6 py-2 bg-black text-white font-semibold rounded-lg hover:bg-gray-800 transition duration-300 mb-6">
+      Download Resume
+  </a>
+
+    <!-- Heading -->
+    <h1 class="text-3xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">Building Beautiful Frontends | Exploring Powerful Backends</h1>
+
+    <!-- Paragraph -->
+    <p class="max-w-xl text-gray-700 dark:text-gray-300 mb-6">
+      I build modern, responsive, and user-friendly web applications using HTML, CSS, JS and also exploring React, Django, and MERN stack.
+    </p>
+
+    <!-- View My Work Button -->
+    <a href="#projects" class="bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition mb-8">
+      View My Work
+    </a>
+
+    <!-- Let’s Talk Subheading -->
+    <a href="#contact"><h2 class="text-xl md:text-2xl font-semibold mb-4 text-gray-900 dark:text-white animate-bounce">
+      Let’s Talk
+    </h2></a>
+
+    <!-- Social Icons -->
+    <div class="flex gap-6 text-gray-900 dark:text-white text-3xl">
+      <a href="https://github.com/Huzaifa1927" target="_blank" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
+          <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.89.58.11.79-.25.79-.56 0-.28-.01-1.02-.01-2-3.2.7-3.88-1.54-3.88-1.54-.53-1.35-1.29-1.71-1.29-1.71-1.06-.73.08-.72.08-.72 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.72 1.27 3.39.97.11-.76.41-1.27.75-1.56-2.55-.29-5.23-1.28-5.23-5.71 0-1.26.45-2.29 1.2-3.09-.12-.29-.52-1.46.11-3.04 0 0 .98-.31 3.2 1.18.93-.26 1.93-.38 2.92-.38.99 0 1.99.13 2.92.38 2.22-1.49 3.2-1.18 3.2-1.18.63 1.58.23 2.75.11 3.04.75.8 1.2 1.83 1.2 3.09 0 4.44-2.69 5.41-5.25 5.7.42.36.8 1.08.8 2.18 0 1.58-.01 2.85-.01 3.24 0 .31.21.68.8.56C20.71 21.38 24 17.08 24 12c0-6.35-5.15-11.5-12-11.5z"/>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/huzaifa-arshad-khan-65025931b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.027-3.037-1.85-3.037-1.852 0-2.136 1.445-2.136 2.937v5.669H9.352V9h3.414v1.561h.047c.476-.9 1.637-1.85 3.37-1.85 3.6 0 4.268 2.368 4.268 5.455v6.286zM5.337 7.433c-1.144 0-2.068-.926-2.068-2.068 0-1.144.924-2.068 2.068-2.068s2.068.924 2.068 2.068c0 1.142-.924 2.068-2.068 2.068zm1.777 13.019H3.561V9h3.553v11.452z"/>
+        </svg>
+      </a>
+      <a href="mailto:huzaifaarshadkhan039@gmail.com" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-8 h-8" viewBox="0 0 24 24">
+          <path d="M12 12.713l-11.99-7.713h23.98l-11.99 7.713zm0 2.574l-12-7.74V21h24V7.547l-12 7.74z"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!--Skill Seciton-->
+  <section id="about" class="py-20 px-4 bg-white dark:bg-gray-900 transition-colors duration-500">
+    <div class="max-w-6xl mx-auto flex flex-col items-center gap-12">
+
+      <!-- Top: Profile Image + About Text -->
+      <div class="flex flex-col md:flex-row items-center gap-10 w-full">
+        <!-- Image -->
+        <div class="flex-shrink-0 mx-auto md:mx-0">
+          <img src="./img/profile1.png" alt="Huzaifa" class="w-64 h-64 rounded-full border-4 border-black dark:border-white">
+        </div>
+
+        <!-- Text Content -->
+        <div class="flex-1 text-center md:text-left">
+          <h2 class="text-3xl font-bold mb-4 text-gray-900 dark:text-white">About Me</h2>
+          <p class="text-gray-700 dark:text-gray-300 mb-6">
+            I am Huzaifa, a passionate web developer and AI enthusiast. I specialize in Frontend and Backend Development using HTML, CSS, JS, React, Django, and the MERN stack.  
+            My goal is to build responsive, user-friendly, and visually appealing web applications. I am constantly learning and exploring new technologies to enhance my skills.
+          </p>
+          <a href="#projects" class="inline-block px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">View My Work</a>
+        </div>
+      </div>
+
+      <!-- Bottom: Cards -->
+      <div class="grid md:grid-cols-3 gap-6 w-full mt-12">
+
+        <!-- Card 1: Clean Code -->
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col items-center">
+          <!-- Icon: Code Brackets -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mb-4 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 18l6-6-6-6M8 6l-6 6 6 6"/>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Clean Code</h3>
+          <p class="text-gray-700 dark:text-gray-300 text-center">
+            Writing maintainable, scalable code following best practices and industry standards.
+          </p>
+        </div>
+
+        <!-- Card 2: Collaboration -->
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col items-center">
+          <!-- Icon: Users + Tech/Network -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mb-4 text-black dark:text-white" viewBox="0 0 640 640" fill="currentColor">
+            <path d="M136 192C136 125.7 189.7 72 256 72C322.3 72 376 125.7 376 192C376 258.3 322.3 312 256 312C189.7 312 136 258.3 136 192zM48 546.3C48 447.8 127.8 368 226.3 368L285.7 368C384.2 368 464 447.8 464 546.3C464 562.7 450.7 576 434.3 576L77.7 576C61.3 576 48 562.7 48 546.3zM544 160C557.3 160 568 170.7 568 184L568 232L616 232C629.3 232 640 242.7 640 256C640 269.3 629.3 280 616 280L568 280L568 328C568 341.3 557.3 352 544 352C530.7 352 520 341.3 520 328L520 280L472 280C458.7 280 448 269.3 448 256C448 242.7 458.7 232 472 232L520 232L520 184C520 170.7 530.7 160 544 160z"/>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Collaboration</h3>
+          <p class="text-gray-700 dark:text-gray-300 text-center">
+            Working effectively with cross-functional teams to deliver projects on time and budget.
+          </p>
+        </div>
+
+        <!-- Card 3: Performance -->
+        <div class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition flex flex-col items-center">
+          <!-- Icon: Lightning -->
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mb-4 text-black dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Performance</h3>
+          <p class="text-gray-700 dark:text-gray-300 text-center">
+            Optimizing applications for speed, accessibility, and excellent user experience.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+  <section id="skills" class="py-20 px-4 bg-white dark:bg-gray-900 transition-colors duration-500">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-3xl font-bold mb-12 text-gray-900 dark:text-white">My Skills</h2>
+
+    <!-- Horizontal Timeline / Skill Bars -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+
+      <!-- Skill Node: Completed -->
+      <div class="flex flex-col items-center">
+        <img src="./img/html.png" alt="HTML" class="w-16 h-16 mb-2">
+        <span class="text-gray-900 dark:text-white font-semibold mb-2">HTML</span>
+        <div class="w-24 h-2 bg-green-500 rounded-full"></div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <img src="./img/css-3.png" alt="CSS" class="w-16 h-16 mb-2">
+        <span class="text-gray-900 dark:text-white font-semibold mb-2">CSS</span>
+        <div class="w-24 h-2 bg-green-500 rounded-full"></div>
+      </div>
+
+      <!-- Current Skill -->
+      <div class="flex flex-col items-center">
+        <img src="./img/js.png" alt="JavaScript" class="w-16 h-16 mb-2">
+        <span class="text-gray-900 dark:text-white font-semibold mb-2">JavaScript</span>
+        <div class="w-24 h-2 bg-yellow-500 rounded-full"></div>
+      </div>
+
+      <!-- FYP / Current Focus -->
+      <div class="flex flex-col items-center">
+        <img src="./img/Django.png" alt="Django" class="w-16 h-16 mb-2">
+        <span class="text-gray-900 dark:text-white font-semibold mb-2">Django</span>
+        <div class="w-24 h-2 bg-blue-500 rounded-full"></div>
+      </div>
+
+      <!-- Future Skills / Exploring -->
+      <div class="flex flex-col items-center">
+        <img src="./img/physics.png" alt="React" class="w-16 h-16 mb-2 opacity-60">
+        <span class="text-gray-900 dark:text-white font-semibold mb-2 opacity-60">React</span>
+        <div class="w-24 h-2 bg-gray-500 rounded-full opacity-60"></div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <img src="./img/mern.png" alt="MERN" class="w-16 h-16 mb-2 opacity-60">
+        <span class="text-gray-900 dark:text-white font-semibold mb-2 opacity-60">MERN</span>
+        <div class="w-24 h-2 bg-gray-500 rounded-full opacity-60"></div>
+      </div>
+
+      <div class="flex flex-col items-center">
+        <img src="./img/Ai.jpg" alt="AI" class="w-16 h-16 mb-2 opacity-60">
+        <span class="text-gray-900 dark:text-white font-semibold mb-2 opacity-60">AI</span>
+        <div class="w-24 h-2 bg-gray-500 rounded-full opacity-60"></div>
+      </div>
+
+    </div>
+
+    <!-- Timeline Line -->
+    <div class="hidden md:block relative mt-6 h-1 bg-gray-300 dark:bg-gray-700">
+      <div class="absolute top-0 left-0 h-1 bg-green-500 rounded-full" style="width: calc((2/7)*100%)"></div> <!-- Completed HTML+CSS -->
+      <div class="absolute top-0 left-[calc((2/7)*100%)] h-1 bg-yellow-500 rounded-full" style="width: calc((2/7)*100%)"></div> <!-- JS -->
+      <div class="absolute top-0 left-[calc((4/7)*100%)] h-1 bg-blue-500 rounded-full" style="width: calc((1/7)*100%)"></div> <!-- Django -->
+      <!-- Future skills left gray automatically -->
+    </div>
+
+  </div>
+</section>
+
+  <!-- Project Section -->
+  <section id="projects" class="py-20 px-4 bg-gray-100 dark:bg-gray-900 transition-colors duration-500">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-12 text-gray-900 dark:text-white">My Projects</h2>
+      
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+    <!-- Project Card 1 -->
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition hover:shadow-xl">
+      <img src="./img/Ecomerce.png" alt="Project 1" class="w-full h-48 object-cover cursor-pointer project-img hover:scale-105 transition-transform duration-300">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">E-commerce Project.</h3>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          A responsive website using modern CSS techniques and animations for better UX.
+        </p>
+        <button class="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition view-details" data-index="0">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition hover:shadow-xl">
+      <img src="./img/shopify store practice.png" alt="Project 2" class="w-full h-48 object-cover cursor-pointer project-img hover:scale-105 transition-transform duration-300">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">Shopify Store Design Practice</h3>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          A practice project showcasing a clean, modern Shopify store layout with user-friendly navigation, product display, and responsive design for an engaging shopping experience.
+        </p>
+        <button class="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition view-details" data-index="1">
+          View Details
+        </button>
+      </div>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition hover:shadow-xl">
+      <img src="./img/University institue.png" alt="Project 3" class="w-full h-48 object-cover cursor-pointer project-img hover:scale-105 transition-transform duration-300">
+      <div class="p-4">
+        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white">University website design</h3>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">
+          Clean and modern university website design project showcasing responsive layouts, easy navigation, and professional UI for enhanced user experience.
+        </p>
+        <button class="px-4 py-2 bg-black text-white rounded-lg hover:bg-gray-800 transition view-details" data-index="2">
+          View Details
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+    </div>
+  </section>
+
+  <!-- Fullscreen Modal -->
+  <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-90 hidden z-50 flex items-center justify-center p-4">
+    <button id="close-modal" class="absolute top-4 right-4 text-white text-3xl font-bold z-50">×</button>
+    <button id="prev" class="absolute left-4 text-white text-4xl font-bold z-50">‹</button>
+    <button id="next" class="absolute right-4 text-white text-4xl font-bold z-50">›</button>
+    <img id="modal-img" src="" alt="Project" class="w-full h-full object-contain cursor-zoom-in rounded-lg shadow-lg">
+  </div>
+<!-- Contact Section -->
+<section id="contact" class="py-20 px-4 bg-white dark:bg-gray-900 transition-colors duration-500">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- Left Side: Heading + Paragraph + Contact Info + Trust Points -->
+    <div class="space-y-8">
+      <h2 class="text-4xl font-extrabold text-gray-900 dark:text-white">Get in Touch</h2>
+      
+      <p class="text-gray-700 dark:text-gray-300 text-lg">
+        I’m here to bring your ideas to life with precision and dedication. Whether it’s a web project, freelance work, or collaboration, you can trust me to handle it professionally and efficiently.
+      </p>
+
+      <!-- Contact Info -->
+      <div class="space-y-4 text-gray-700 dark:text-gray-300">
+        <p class="flex items-center">
+          <span class="material-icons mr-2">email</span>
+          <a href="mailto:huzaifaarshadkhan039@gmail.com" class="hover:underline">huzaifaarshadkhan039@gmail.com</a>
+        </p>
+        <p class="flex items-center">
+          <span class="material-icons mr-2">phone</span>
+          <a href="tel:+92 328 7673669" class="hover:underline">+92 328 7673669</a>
+        </p>
+        <p class="flex items-center">
+          <span class="material-icons mr-2">location_on</span>
+          Islamabad, Pakistan
+        </p>
+      </div>
+
+      <!-- Trust Points -->
+      <div class="mt-6">
+        <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Why Work With Me</h4>
+        <div class="space-y-3">
+          <p class="flex items-start text-gray-700 dark:text-gray-300">
+            <span class="bg-gray-600 rounded-full w-3 h-3 mt-2 mr-3 inline-block"></span>
+            Clear communication & timely updates throughout the project.
+          </p>
+          <p class="flex items-start text-gray-700 dark:text-gray-300">
+            <span class="bg-gray-600 rounded-full w-3 h-3 mt-2 mr-3 inline-block"></span>
+            Organized project management ensuring smooth workflow.
+          </p>
+          <p class="flex items-start text-gray-700 dark:text-gray-300">
+            <span class="bg-gray-600 rounded-full w-3 h-3 mt-2 mr-3 inline-block"></span>
+            Trustworthy & professional approach to meet your requirements.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Side: Contact Form -->
+    <div>
+      <form name="contact" method="POST" data-netlify="true" id="contact-form" class="bg-gray-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg space-y-4">
+        
+        <!-- Hidden input for Netlify -->
+        <input type="hidden" name="form-name" value="contact">
+
+        <div>
+          <label for="name" class="block text-gray-700 dark:text-gray-300 font-medium mb-1">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required
+            class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400">
+        </div>
+
+        <div>
+          <label for="email" class="block text-gray-700 dark:text-gray-300 font-medium mb-1">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required
+            class="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400">
+        </div>
+
+        <div>
+          <label for="message" class="block text-gray-700 dark:text-gray-300 font-medium mb-1">Message</label>
+          <textarea id="message" name="message" rows="3" placeholder="Type your message..." required
+            class="w-full p-4 rounded-lg border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 resize-none transition-all duration-200"></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition flex items-center justify-center gap-2">
+          Send Message
+        </button>
+
+        <p id="form-success" class="text-green-500 hidden mt-2">Message sent successfully!</p>
+        <p id="form-error" class="text-red-500 hidden mt-2">Failed to send message. Try again.</p>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 dark:bg-gray-100 text-gray-300 dark:text-gray-900 py-12 px-4 transition-colors duration-500">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+
+      <!-- About / Brand -->
+      <div class="space-y-4">
+        <h3 class="text-2xl font-bold text-white dark:text-gray-900">Huzaifa Arshad</h3>
+        <p class="text-gray-400 dark:text-gray-700">
+          Web Developer & Freelancer creating modern, responsive websites with clean code and beautiful design.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="space-y-2">
+        <h4 class="text-xl font-semibold text-white dark:text-gray-900 mb-2">Quick Links</h4>
+        <ul class="space-y-1">
+          <li><a href="#home" class="hover:underline">Home</a></li>
+          <li><a href="#about" class="hover:underline">About</a></li>
+          <li><a href="#projects" class="hover:underline">Projects</a></li>
+          <li><a href="#contact" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info / Socials -->
+      <div class="space-y-2">
+        <h4 class="text-xl font-semibold text-white dark:text-gray-900 mb-2">Contact</h4>
+        <p class="flex items-center"><span class="material-icons mr-2">email</span> <a href="mailto:huzaifaarshadkhan039@gmail.com" class="hover:underline">huzaifaarshadkhan039@gmail.com</a></p>
+        <p class="flex items-center"><span class="material-icons mr-2">phone</span> <a href="tel:+92 328 7673669" class="hover:underline">+92 328 7673669</a></p>
+        <!-- Socials -->
+        <div class="flex space-x-4 mt-2">
+          <a href="https://www.linkedin.com/in/huzaifa-arshad-khan-65025931b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="hover:text-white dark:hover:text-gray-900" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          
+          <a href="https://github.com/Huzaifa1927" class="hover:text-white dark:hover:text-gray-900" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="border-t border-gray-700 dark:border-gray-300 mt-8 pt-6 text-center text-gray-500 dark:text-gray-600">
+      &copy; 2025 Huzaifa Arshad Khan. All rights reserved.
+    </div>
+  </footer>
+
+
+
+
+  <script src="./js/script.js"></script>
+
+</body>
+</html>
